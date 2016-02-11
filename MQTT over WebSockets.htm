@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<!-- saved from url=(0033)http://test.mosquitto.org/ws.html -->
+<!DOCTYPE html PUBLIC "" ""><HTML><HEAD><META content="IE=11.0000" 
+http-equiv="X-UA-Compatible">
+	 <TITLE>MQTT over WebSockets</TITLE> 
+<META http-equiv="Content-Type" content="text/html; charset=windows-1252"><LINK 
+href="style.css" rel="stylesheet" type="text/css"> 
+<SCRIPT src="mosquitto.js" type="text/javascript"></SCRIPT>
+ 
+<SCRIPT src="jquery-1.7.2.min.js" type="text/javascript"></SCRIPT>
+ 
+ 
+<META name="GENERATOR" content="MSHTML 11.00.9600.18125"></HEAD> 
+<BODY>
+<H1>MQTT over WebSockets</H1>
+<P>This is a very early/incomplete/broken example of MQTT over Websockets for
+	test.mosquitto.org. Play around with the buttons below, but don't be	surprised 
+if it breaks or isn't very pretty. If you want to develop your own
+	websockets/mqtt app, use the url ws://test.mosquitto.org/mqtt , use	subprotocol 
+"mqtt" (preferred) or "mqttv3.1" (legacy) and binary data. Then just treat the 
+websocket as a	normal socket connection and read/write MQTT packets.</P>
+<H2>Usage</H2>
+<P>Click Connect, then use the Publish and/or Subscribe buttons. You should	see 
+text appear below. If you've got another mqtt client available, try	subscribe to 
+a topic here then use your other client to send a message to	that topic.</P>
+    <DIV id="server">
+        <H2>Serveur : </H2>
+      
+        <P>Url: <INPUT class="txt" id="urlid" type="text" value=url size=80></P>
+   </DIV>
+
+<script language="javascript" type="text/javascript">
+    var url = "ws://test.mosquitto.org:8080/mqtt";
+    document.getElementById('urlid').value = url;
+</script>
+
+<DIV id="broker">
+<H2>Broker</H2><INPUT class="but" id="connect-button" type="button" value="Connect">
+	 <INPUT class="but" id="disconnect-button" type="button" value="Disconnect"> 
+</DIV>
+<DIV id="publish">
+<H2>Publish</H2>
+<P>Topic: <INPUT class="txt" id="pub-topic-text" type="text"></P>
+<P>Payload: <INPUT class="txt" id="payload-text" type="text"></P><INPUT class="but" id="publish-button" type="button" value="Publish"> 
+</DIV>
+<DIV id="subscribe">
+<H2>Subscribe/Unsubscribe</H2>
+<P>Topic: <INPUT class="txt" id="sub-topic-text" type="text" value="$SYS/#"></P>
+<P><INPUT class="but" id="subscribe-button" type="button" value="Subscribe">
+	 <INPUT class="but" id="unsubscribe-button" type="button" value="Unsubscribe">
+	 </P></DIV>
+<DIV id="debug"></DIV>
+<SCRIPT src="tmo.js" type="text/javascript"></SCRIPT>
+ </BODY></HTML>

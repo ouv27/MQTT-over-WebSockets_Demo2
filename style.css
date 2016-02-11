@@ -1,0 +1,18 @@
+body {
+	margin: 0px auto; width: 900px; text-align: justify; font-family: Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif; font-size: 95%;
+}
+#left {
+	margin: 0px 10px 10px; width: 400px; float: left;
+}
+#right {
+	margin: 0px 10px 10px; width: 400px; float: left;
+}
+h1 {
+	text-align: center; margin-bottom: 5px;
+}
+h2 {
+	text-align: center; margin-top: 20px; margin-bottom: 5px;
+}
+h3 {
+	text-align: center;
+}
